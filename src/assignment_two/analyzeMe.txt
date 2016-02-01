@@ -1,0 +1,27 @@
+PrintWriter(OutputStream outputStream, boolean flushingOn)
+Here, outputStream is an object of type OutputStream and flushingOn controls whether Java flushes the output stream every time a println( ) method (among others) is called. If flushingOn is true, flushing automatically takes place. If false, flushing is not automatic.
+PrintWriter supports the print( ) and println( ) methods for all types including Object. Thus, you can use these methods in just the same way as they have been used with System.out.
+If an argument is not a primitive type, the PrintWriter methods will call the object’s toString( )
+method and then print out the result.
+To write to the console using a PrintWriter, specify System.out for the output stream and flush the stream after each call to println( ). For example, this line of code creates a PrintWriter that is connected to console output.
+PrintWriter pw = new PrintWriter(System.out, true);
+The following application illustrates using a PrintWriter to handle console output.
+// Demonstrate PrintWriter.
+import java.io.*;
+11
+public static void main(String args[]) {
+PrintWriter pw = new PrintWriter(System.out, true);
+10
+123.65 
+pw.println("Using a PrintWriter.");
+pw.println(i);
+pw.println(d);
+pw.println(i + " + " + d + " is " + (i+d));
+}
+}
+The output from this program is
+
+
+
+
+
